@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   constructor(private client: HttpClient) {}
 
   ngOnInit(): void {
-      this.client.get<boolean>('http://localhost:8080/api/v1/get-server-status')
+      this.client.get<boolean>('http://olejarczykjakub.ddns.net:8080/api/v1/get-server-status')
         .pipe(take(1))
         .subscribe(status => this.status = status);
   }
